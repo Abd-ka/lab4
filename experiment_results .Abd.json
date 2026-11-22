@@ -1,0 +1,58 @@
+{
+  "model_name": "Soft Voting: Random Forest + Gradient Boosting + MLP(16)",
+  "random_seed": 42,
+  "split": "train_test_split(test_size=0.2, stratify=y, random_state=42): 800 train / 200 test",
+  "selection_criterion": "mean ROC-AUC, 5-fold x 2 repeats stratified CV on train only",
+  "roc_auc": 0.8512,
+  "accuracy": 0.8,
+  "precision": 0.8289,
+  "recall": 0.9,
+  "f1": 0.863,
+  "experiments": [
+    {
+      "model": "Logistic Regression",
+      "cv_roc_auc_train": 0.7654,
+      "test_roc_auc": 0.8362,
+      "test_accuracy": 0.81,
+      "test_precision": 0.8355,
+      "test_recall": 0.9071,
+      "test_f1": 0.8699
+    },
+    {
+      "model": "Random Forest",
+      "cv_roc_auc_train": 0.7825,
+      "test_roc_auc": 0.8338,
+      "test_accuracy": 0.765,
+      "test_precision": 0.8345,
+      "test_recall": 0.8286,
+      "test_f1": 0.8315
+    },
+    {
+      "model": "Gradient Boosting",
+      "cv_roc_auc_train": 0.7841,
+      "test_roc_auc": 0.8498,
+      "test_accuracy": 0.775,
+      "test_precision": 0.795,
+      "test_recall": 0.9143,
+      "test_f1": 0.8505
+    },
+    {
+      "model": "MLP (16)",
+      "cv_roc_auc_train": 0.7772,
+      "test_roc_auc": 0.8439,
+      "test_accuracy": 0.8,
+      "test_precision": 0.8333,
+      "test_recall": 0.8929,
+      "test_f1": 0.8621
+    },
+    {
+      "model": "Soft Voting RF+GB+MLP",
+      "cv_roc_auc_train": 0.7884,
+      "test_roc_auc": 0.8512,
+      "test_accuracy": 0.8,
+      "test_precision": 0.8289,
+      "test_recall": 0.9,
+      "test_f1": 0.863
+    }
+  ]
+}
